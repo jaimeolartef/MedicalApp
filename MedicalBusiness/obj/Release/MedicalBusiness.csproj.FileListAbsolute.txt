@@ -1,0 +1,12 @@
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\bin\Release\MedicalBusiness.dll.config
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\bin\Release\MedicalBusiness.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\bin\Release\MedicalBusiness.pdb
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\bin\Release\EntityFramework.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\bin\Release\EntityFramework.xml
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\obj\Release\MedicalBusiness.csproj.AssemblyReference.cache
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\obj\Release\MedicalBusiness.csproj.CoreCompileInputs.cache
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\obj\Release\MedicalBusiness.csproj.CopyComplete
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\obj\Release\MedicalBusiness.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalBusiness\obj\Release\MedicalBusiness.pdb

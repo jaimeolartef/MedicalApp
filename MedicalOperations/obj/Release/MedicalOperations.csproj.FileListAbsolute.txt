@@ -1,0 +1,15 @@
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\MedicalOperations.dll.config
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\MedicalOperations.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\MedicalOperations.pdb
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\EntityFramework.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\MedicalBusiness.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\MedicalBusiness.pdb
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\MedicalBusiness.dll.config
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\EntityFramework.xml
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\obj\Release\MedicalOperations.csproj.AssemblyReference.cache
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\obj\Release\MedicalOperations.csproj.CoreCompileInputs.cache
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\obj\Release\MedicalOperations.csproj.CopyComplete
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\obj\Release\MedicalOperations.dll
+C:\Users\KatheAndBrian\source\repos\MedicalApp\MedicalOperations\obj\Release\MedicalOperations.pdb

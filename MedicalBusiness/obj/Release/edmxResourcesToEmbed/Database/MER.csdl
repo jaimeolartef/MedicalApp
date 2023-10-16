@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MedicalAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CitasMedicas">
+    <Key>
+      <PropertyRef Name="IdCita" />
+    </Key>
+    <Property Name="IdCita" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProfesionalSalud" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Especialidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sede" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Hora" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodigoCita" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Asistencia" Type="Boolean" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PacienteDocumento" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Paciente">
+    <Key>
+      <PropertyRef Name="IdClient" />
+    </Key>
+    <Property Name="IdClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumeroDocumento" Type="Int32" Nullable="false" />
+    <Property Name="TipDocumento" Type="Int32" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="ProfesionalSalud">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroDocumento" Type="Int32" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoDocumento" Type="Int32" />
+    <Property Name="Especialidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Boolean" />
+    <Property Name="FecharCreacion" Type="DateTime" Precision="0" />
+    <Property Name="NumeroLicencia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sedes">
+    <Key>
+      <PropertyRef Name="IdSede" />
+    </Key>
+    <Property Name="IdSede" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreSede" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="EstadoSede" Type="Boolean" />
+    <Property Name="FechaCreacion" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodigoSede" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="MedicalAppEntitiesDev" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CitasMedicas" EntityType="Self.CitasMedicas" />
+    <EntitySet Name="Paciente" EntityType="Self.Paciente" />
+    <EntitySet Name="ProfesionalSalud" EntityType="Self.ProfesionalSalud" />
+    <EntitySet Name="Sedes" EntityType="Self.Sedes" />
+  </EntityContainer>
+</Schema>

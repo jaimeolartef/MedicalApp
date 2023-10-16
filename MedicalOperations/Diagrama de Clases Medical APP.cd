@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MedicalOperations.Models.CitasMedicasModel">
+    <Position X="1.75" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAgACAAAAAAAEAACAAgAgEAEAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Models\CitasMedicasModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedicalOperations.Models.PacienteModel">
+    <Position X="4.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAICAAAAAEACgAgAAAAAAAAAAAAAAABgAAAAg=</HashCode>
+      <FileName>Models\PacienteModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedicalOperations.Models.ProfesionalSaludModel">
+    <Position X="7" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAACAAAAAEAGgAEAAAAAAABAAAAAAAAgQAAAg=</HashCode>
+      <FileName>Models\ProfesionalSaludModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedicalOperations.Models.SedesModel">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAICAAAEAAACAAQAAAAAAAAAEAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\SedesModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedicalOperations.Models.TipoDocumento">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="MedicalOperations.Models.TipoDocumento.TipDoc" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\TipoDocumento.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="MedicalOperations.Models.TipoDocumento.Especialidades" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\TipoDocumento.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TipoDocumento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

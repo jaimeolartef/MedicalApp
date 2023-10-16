@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MedicalAppModelStoreContainer" CdmEntityContainer="MedicalAppEntitiesDev">
+    <EntitySetMapping Name="CitasMedicas">
+      <EntityTypeMapping TypeName="MedicalAppModel.CitasMedicas">
+        <MappingFragment StoreEntitySet="CitasMedicas">
+          <ScalarProperty Name="IdCita" ColumnName="IdCita" />
+          <ScalarProperty Name="ProfesionalSalud" ColumnName="ProfesionalSalud" />
+          <ScalarProperty Name="Especialidad" ColumnName="Especialidad" />
+          <ScalarProperty Name="Sede" ColumnName="Sede" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="CodigoCita" ColumnName="CodigoCita" />
+          <ScalarProperty Name="Asistencia" ColumnName="Asistencia" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="PacienteDocumento" ColumnName="PacienteDocumento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paciente">
+      <EntityTypeMapping TypeName="MedicalAppModel.Paciente">
+        <MappingFragment StoreEntitySet="Paciente">
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="TipDocumento" ColumnName="TipDocumento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfesionalSalud">
+      <EntityTypeMapping TypeName="MedicalAppModel.ProfesionalSalud">
+        <MappingFragment StoreEntitySet="ProfesionalSalud">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="Especialidad" ColumnName="Especialidad" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FecharCreacion" ColumnName="FecharCreacion" />
+          <ScalarProperty Name="NumeroLicencia" ColumnName="NumeroLicencia" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sedes">
+      <EntityTypeMapping TypeName="MedicalAppModel.Sedes">
+        <MappingFragment StoreEntitySet="Sedes">
+          <ScalarProperty Name="IdSede" ColumnName="IdSede" />
+          <ScalarProperty Name="NombreSede" ColumnName="NombreSede" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="EstadoSede" ColumnName="EstadoSede" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CodigoSede" ColumnName="CodigoSede" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

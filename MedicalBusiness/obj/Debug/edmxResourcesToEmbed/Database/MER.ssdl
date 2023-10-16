@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MedicalAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CitasMedicas">
+    <Key>
+      <PropertyRef Name="IdCita" />
+    </Key>
+    <Property Name="IdCita" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfesionalSalud" Type="varchar" MaxLength="50" />
+    <Property Name="Especialidad" Type="varchar" MaxLength="50" />
+    <Property Name="Sede" Type="varchar" MaxLength="50" />
+    <Property Name="Direccion" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="Hora" Type="varchar" MaxLength="50" />
+    <Property Name="CodigoCita" Type="nvarchar" MaxLength="50" />
+    <Property Name="Asistencia" Type="bit" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="PacienteDocumento" Type="int" />
+  </EntityType>
+  <EntityType Name="Paciente">
+    <Key>
+      <PropertyRef Name="IdClient" />
+    </Key>
+    <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NumeroDocumento" Type="int" Nullable="false" />
+    <Property Name="TipDocumento" Type="int" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+    <Property Name="FechaCreacion" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProfesionalSalud">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroDocumento" Type="int" />
+    <Property Name="Nombres" Type="varchar" MaxLength="50" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="50" />
+    <Property Name="TipoDocumento" Type="int" />
+    <Property Name="Especialidad" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="FecharCreacion" Type="date" />
+    <Property Name="NumeroLicencia" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sedes">
+    <Key>
+      <PropertyRef Name="IdSede" />
+    </Key>
+    <Property Name="IdSede" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreSede" Type="varchar" MaxLength="50" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono" Type="int" />
+    <Property Name="EstadoSede" Type="bit" />
+    <Property Name="FechaCreacion" Type="date" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodigoSede" Type="int" />
+  </EntityType>
+  <EntityContainer Name="MedicalAppModelStoreContainer">
+    <EntitySet Name="CitasMedicas" EntityType="Self.CitasMedicas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Paciente" EntityType="Self.Paciente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfesionalSalud" EntityType="Self.ProfesionalSalud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sedes" EntityType="Self.Sedes" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
