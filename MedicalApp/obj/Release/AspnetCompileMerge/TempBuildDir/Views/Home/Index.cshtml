@@ -1,0 +1,171 @@
+﻿@model MedicalOperations.Models.TipoDocumento
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="h3">
+    <h1>Solicitud y Registros de Citas Medicas</h1>
+</div>
+
+
+<div class="col-md-12">
+    <img src="~/Content/images.jpg" />
+</div>
+<div class="col-md-12">
+
+
+    <div class="form-group">
+        <label for="exampleFormControlInput2">Sedes</label>
+        @Html.DropDownList("Sedes", new SelectList(ViewBag.Sedes, "CodigoSede", "NombreSede"), "Seleccione Sede",
+        new { @class = "form-control" })
+    </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput2">Especialidad</label>
+            @Html.EnumDropDownListFor(
+        z => z.TidEspe,
+        "Seleccione Especialidad",
+        new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Profesional de Salud</label>
+            @*<div id="Especiali"></div>*@
+            <select id="Especiali" name="Field" class="form-control">
+                <option selected="selected" value="0"> Seleccione Profesional</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombres</label>
+            <input type="text" class="form-control" id="NameClient">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Apellidos</label>
+            <input type="text" class="form-control" id="SecondNameClient">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput2">Tipo de Documento</label>
+            @Html.EnumDropDownListFor(
+        x => x.TidDocs,
+        "Seleccione Tipo Documento",
+        new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Numero de Documento</label>
+            <input type="number" class="form-control" id="numberDocument">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email</label>
+            <input type="text" class="form-control" id="email">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Direccion de Residencia</label>
+            <input type="text" class="form-control" id="addresC">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Fecha Cita</label>
+            <input type="date" class="form-control" id="dateClient">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Hora Cita</label>
+            <input type="time" id="appt" name="appt" min="08:00" max="18:00" required />
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Telefono</label>
+            <input type="number" class="form-control" id="TelefonoClient">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn" id="SendMedicalC">Solicitar Cita</button>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    <script>
+
+    $('select#TidEspe').change(function () {
+        var idEspe = $('#TidEspe').val();
+        var Especia = $("#Especiali");
+        $.ajax(
+            {
+                type: 'GET',
+                dataType: 'html',
+                url: '@Url.Action("GetEspeALL", "Home")',
+                data: {
+                    IdEspe: idEspe
+                },
+                success:
+                    function (data) {
+                        Especia.html('');
+                        var obj = JSON.parse(data);
+                        console.log(obj);
+                        var populated_options = "";
+                        $.each(obj, function (id, option) {
+                            Especia.append($('<option></option>').val(option.Especialidad).html(option.Nombres));
+                        });
+                    },
+                error:
+                    function (response) {
+                        alert("Error: " + response);
+                    }
+            });
+    });
+
+
+    $("#SendMedicalC").click(function () {
+
+                    $.ajax(
+                        {
+                            type: 'POST',
+                            dataType: 'html',
+                            url: '@Url.Action("SendCitaMedica", "Home")',
+                            data: {
+                                Nombres: $("#NameClient").val(),
+                                Apellidos: $("#SecondNameClient").val(),
+                                TipDocument: $("#TidDocs").val(),
+                                NumeroDocumento: $("#numberDocument").val(),
+                                Email: $("#email").val(),
+                                Direccion: $("#addresC").val(),
+                                DateD: $("#dateClient").val(),
+                                Telefono: $("#TelefonoClient").val(),
+                                TipEspe: $("#TidEspe option:selected").text(),
+                                Medical: $("#Especiali option:selected").text(),
+                                Hora: $("#appt").val(),
+                                SedesN: $("#Sedes option:selected").text()
+                            },
+                            success:
+                                function (data) {
+                                    if (data) {
+                                        alert("Cita Creada con exito")
+                                    } else {
+                                        alert("Señor usuario comuniquese con el administrador del sistema")
+                                    }
+                                },
+                            error:
+                                function (response) {
+                                    alert("Error: " + response);
+                                }
+                        });
+
+            });
+
+    </script>
+
+    @*<div class="row">
+            <div class="col-md-4">
+                <h2>Getting started</h2>
+                <p>
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    enables a clean separation of concerns and gives you full control over markup
+                    for enjoyable, agile development.
+                </p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Get more libraries</h2>
+                <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Web Hosting</h2>
+                <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            </div>
+        </div>*@

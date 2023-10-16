@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<div class="h3">
+    <h1>Lista de Citas Medicas</h1>
+</div>
+<div class="col-md-12">
+    <table id="tablecitas" class="table">
+        <thead>
+            <tr>
+                <th scope="col">Profesional Salud</th>
+                <th scope="col">Especialidad</th>
+                <th scope="col">Sede</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Fecha Cita</th>
+                <th scope="col">Hora</th>
+                <th scope="col">Codigo Cita</th>
+                <th scope="col">Asistencia</th>
+                <th scope="col">Documento Paciente</th>
+                <th scope="col">Observaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.Citas != null)
+            {
+                foreach (var cita in ViewBag.Citas)
+                {
+                    <tr>
+                        <td scope="row">@(@cita.ProfesionalSalud)</td>
+                        <td>@(@cita.Especialidad)</td>
+                        <td>@(@cita.Sede)</td>
+                        <td>@(@cita.Direccion)</td>
+                        <td>@(@cita.Fecha)</td>
+                        <td>@(@cita.Hora)</td>
+                        <td>@(@cita.CodigoCita)</td>
+                        <td>@(@cita.Asistencia)</td>
+                        <td>@(@cita.PacienteDocumento)</td>
+                        <td>@(@cita.Observaciones)</td>
+                    </tr>
+
+                }
+            }
+
+        </tbody>
+    </table>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+<script>
+    let table = new DataTable('#tablecitas', {
+        responsive: true
+    });
+</script>
